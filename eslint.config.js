@@ -1,28 +1,53 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import tseslint from 'typescript-eslint'
+import globals from 'globals';
+import pluginJs from '@eslint/js';
+import pluginReact from 'eslint-plugin-react';
 
-export default tseslint.config(
-  { ignores: ['dist'] },
+/** @type {import('eslint').Linter.Config[]} */
+export default [
+  { files: ['**/*.{js,mjs,cjs,jsx}'] },
+  { languageOptions: { globals: globals.browser } },
+  pluginJs.configs.recommended,
+  pluginReact.configs.flat.recommended,
   {
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],
-    files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
+    env: {
+      browser: true,
+      es2021: true
     },
-    plugins: {
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
+    extends: [
+      'eslint:recommended',
+      'plugin:react/recommended',
+      'plugin:react/jsx-runtime',
+      'plugin:jsx-a11y/recommended',
+      'plugin:prettier/recommended'
+    ],
+    overrides: [
+      {
+        env: {
+          node: true
+        },
+        files: ['.eslintrc.{js,cjs}'],
+        parserOptions: {
+          sourceType: 'script'
+        }
+      }
+    ],
+    parserOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module'
     },
+    plugins: ['react'],
     rules: {
-      ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': [
+      'no-var': 'error',
+      'prefer-const': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'prettier/prettier': [
         'warn',
-        { allowConstantExport: true },
-      ],
-    },
-  },
-)
+        {
+          endOfLine: 'auto'
+        }
+      ]
+    }
+  }
+];
+

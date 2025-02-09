@@ -1,50 +1,67 @@
-# React + TypeScript + Vite
+# Pet-проект "Todos App"
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Стек технологий**: React, CSS, JS, HTML, ESLint, Prettier
 
-Currently, two official plugins are available:
+**Описание работы приложения**: В приложении Art-Boutique можно просматривать витрину украшений, галлерею работ и познакомиться с автором. Нужно провести регистрацию/авторизацию, чтобы была возможность посмотреть витрину, иначе будет доступна только галлерея украшений. А если вы являетесь админом, то сможете добавлять карточки с украшениями в эту галерею и менять информацию об авторе.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Структура проекта:
 
-## Expanding the ESLint configuration
+- src/ - исходные файлы проекта
+- src/components/ - компоненты приложения из которых композируется проект
+- src/accets/ - папка для хранения статических ресурсов (изображения, шрифты и т. д.), использующихся в приложении
+- public/ - файлы сайта для браузера
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Важные файлы проекта:
 
-- Configure the top-level `parserOptions` property like this:
+- public/index.html - HTML-файл главной страницы
+- src/components/App.jsx - главный компонент композиции проекта
+- src/index.css - общие стили приложения, которые применяются ко всему приложению
+- src/index.jsx - точка входа для React-приложения. Здесь происходит рендеринг компонента App и инициализация приложения
+- src/constants/variables.css - константы переменных для стилей
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Вспомогательные файлы приложения:
+
+- .babelrc - конфигурация babel
+- .gitignore - файл gitignore, включающий ненужные файлы при пуше в репозиторий
+- .prettierrc - конфигурация prettier
+- config-overrides.js - конфигурация модифицируемая с помощью функции override, чтобы добавить поддержку для обработки LESS-файлов
+- eslint.config.js - конфигурация eslint
+
+## Установка и запуск приложения
+
+Для установки и запуска проекта необходимо выполнить команды для установки зависимости и запуска проекта в режиме разработки, соответственно.
+
+```
+npm install
+npm run start
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+или
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
 ```
+yarn
+yarn start
+```
+
+## Сборка
+
+Для сборки проекта в продакшн необходимо выполнить команду сборки в режиме разработки.\
+Для данного проекта нет ограничений по использованию пакетного менеджера, поэтому можно использовать также YARN или PNPM.
+
+```
+npm run build
+```
+
+или
+
+```
+yarn build
+```
+
+## Системные требования
+
+На данных версиях производилась разработка, тестирование и запуск приложения в продакшн.
+
+- Node.js >= 20.15.0
+- npm >= 10.9.2
+
