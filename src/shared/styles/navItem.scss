@@ -1,0 +1,48 @@
+@use './variables.scss' as *;
+
+.navigate__list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+
+  svg {
+    transition: fill 0.2s ease-in;
+  }
+
+  &:hover {
+    svg {
+      fill: $hover-color;
+    }
+  }
+
+  &-item {
+    position: relative;
+    font-weight: 500;
+    max-height: 20px;
+    user-select: none;
+    transition: color 0.2s ease-in;
+
+    &:hover {
+      color: $hover-color;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -4px;
+      width: 100%;
+      height: 0.1rem;
+      background: url('../../assets/images/decoration/hor-line-small-hvr.svg')
+        no-repeat center / cover;
+      transform: translateX(-50%) scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover::after {
+      transform: translateX(-50%) scaleX(1);
+    }
+  }
+}

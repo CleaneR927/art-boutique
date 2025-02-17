@@ -1,0 +1,146 @@
+@use './variables.scss' as *;
+
+.navigate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 16px;
+  gap: 15px;
+  height: 100%;
+  padding: 15px;
+  width: 100%;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    width: 200px;
+    height: 170px;
+    background: url('../../assets/images/bg-small-right.svg') no-repeat center /
+      contain;
+  }
+
+  &__column {
+    flex: 1;
+
+    ul {
+      position: relative;
+      z-index: 1;
+      padding-block: 0;
+    }
+
+    &--list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding-inline: 15px;
+    }
+
+    &--contacts {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 25px;
+
+      & .email,
+      & .time {
+        &--title {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: default;
+  }
+
+  &__divider {
+    max-width: 100%;
+    height: 2px;
+    background: url('../../assets/images/decoration/hor-line-large.svg')
+      no-repeat center / cover;
+  }
+}
+
+@media screen and (min-width: 630px) {
+  .navigate {
+    flex-direction: row;
+    gap: 30px;
+    padding-block: 20px;
+    padding-inline: 30px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0px;
+      top: -30px;
+      width: 250px;
+      height: 250px;
+      background: url('../../assets/images/bg-small-left.svg') no-repeat
+        center / cover;
+    }
+
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   right: 0;
+    //   bottom: 0;
+    //   width: 200px;
+    //   height: 170px;
+    //   background: url('../../assets/images/bg-small-right.svg') no-repeat center / contain;
+    // }
+
+    &__column {
+      ul {
+        padding-inline: 0;
+      }
+
+      &--list,
+      &--contacts {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+
+    &__contact {
+      flex-direction: column;
+      font-size: 18px;
+
+      &.phone {
+        max-height: 30px;
+        font-size: 24px;
+      }
+    }
+
+    &__divider {
+      max-width: auto;
+      height: auto;
+      max-height: 100%;
+      width: 2px;
+      background: url('../../assets/images/decoration/ver-line-small.svg')
+        no-repeat center center;
+      background-size: cover;
+    }
+  }
+}
+
+@media screen and (max-width: 405px) {
+  .navigate {
+    &__column {
+      &--contacts {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+    }
+
+    &__contact {
+      align-items: center;
+    }
+  }
+}

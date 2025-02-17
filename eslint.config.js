@@ -47,7 +47,8 @@ export default [
           endOfLine: 'auto'
         }
       ]
-    }
+    },
+    include: ['src', 'src/types/svg.d.ts']
   }
 ];
 

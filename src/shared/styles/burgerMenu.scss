@@ -1,0 +1,32 @@
+@use './variables.scss' as *;
+
+.burger-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+
+  &:hover {
+    svg path {
+      fill: $hover-color;
+    }
+  }
+
+  .line {
+    transition: all 0.3s ease;
+
+    &.change {
+      &:nth-child(1) {
+        transform: translateY(6px) translateX(-8px) rotate(-45deg);
+      }
+      &:nth-child(2) {
+        transform: translateX(100px);
+      }
+      &:nth-child(3) {
+        transform: translateY(2px) translateX(3px) rotate(45deg);
+      }
+    }
+  }
+}

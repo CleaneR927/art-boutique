@@ -1,0 +1,31 @@
+@use './variables.scss' as *;
+
+.footer__link {
+  &--social {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+
+    img {
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;
+      background-color: $accent-text-color;
+      opacity: 0.8;
+      transition: opacity 0.2s ease-in-out;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 630px) {
+  .footer__link {
+    &--social {
+      justify-content: center;
+    }
+  }
+}
