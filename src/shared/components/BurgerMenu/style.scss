@@ -1,5 +1,3 @@
-@use './variables.scss' as *;
-
 .burger-menu {
   display: flex;
   justify-content: center;
@@ -10,7 +8,7 @@
 
   &:hover {
     svg path {
-      fill: $hover-color;
+      fill: var(--hover-color, #a6906e);
     }
   }
 

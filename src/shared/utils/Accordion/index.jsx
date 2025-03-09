@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import '../styles/accordeon.scss';
+import './style.scss';
 
 const Accordion = ({ isOpen, children }) => {
   return (

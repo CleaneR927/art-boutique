@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Accordion from '../../shared/utils/Accordeon';
-import NavBar from '../NavBar/NavBar';
+import Accordion from '../../shared/utils/Accordion';
+import NavBar from '../NavBar';
 import BurgerMenu from '../../shared/components/BurgerMenu';
-import '../../shared/styles/header.scss';
+import './style.scss';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);

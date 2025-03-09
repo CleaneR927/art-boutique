@@ -1,7 +1,7 @@
 import React from 'react';
 import SocialItem from '../../shared/components/SocialItem';
-import ArraySocial from '../../shared/data/ArraySocial';
-import '../../shared/styles/footer.scss';
+import dataSocial from '../../shared/data/dataSocial';
+import './style.scss';
 
 const Footer = () => {
   return (
@@ -23,7 +23,7 @@ const Footer = () => {
         <div className="footer__divider" />
         <div className="footer__link--container">
           <ul className="footer__link--socials">
-            <SocialItem socialData={ArraySocial} />
+            <SocialItem socialData={dataSocial} />
           </ul>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import { useInView } from 'react-intersection-observer';
-import '../styles/fadeInText.scss';
+import './fadeInText.scss';
 
 const FadeInText = ({ children }) => {
   const { ref, inView } = useInView({

@@ -1,5 +1,5 @@
-@use './variables.scss' as *;
 @use './mixins/button-styles.scss' as *;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,14 +12,12 @@ body {
   font-family: 'Playfair Display', Georgia, serif;
   line-height: 1.5;
   font-weight: 400;
-  background-color: $main-bg-color;
-  color: $main-text-color;
+  background-color: var(--main-bg-color, #f9efdb);
+  color: var(--main-text-color, #32302c);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   letter-spacing: 0.1rem;
-  color: $main-text-color;
 }
 
 a {
@@ -39,6 +37,10 @@ li {
 }
 
 button {
-  @include button-styles($main-text-color, $accent-text-color, 9px 35px 11px);
+  @include button-styles(
+    var(--main-text-color, #32302c),
+    var(--accent-text-color, #fff),
+    9px 35px 11px
+  );
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../shared/styles/navItem.scss';
+import './style.scss';
 
 const NavItem = ({ title, onClick }) => {
   return (
