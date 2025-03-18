@@ -1,16 +1,9 @@
 import React from 'react';
 import NavItem from '../../shared/components/NavItem';
+import { navItems } from './data';
 import './style.scss';
 
 const NavBar = ({ onClose }) => {
-  const navItems = [
-    'Новости',
-    'Рекомендации',
-    'Карточки новых товаров',
-    'Коллекции',
-    'Информация о магазине'
-  ];
-
   return (
     <div className="navigate">
       <div className="navigate__column ">

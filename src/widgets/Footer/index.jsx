@@ -1,6 +1,6 @@
 import React from 'react';
 import SocialItem from '../../shared/components/SocialItem';
-import dataSocial from '../../shared/data/dataSocial';
+import dataSocial from './data';
 import './style.scss';
 
 const Footer = () => {
