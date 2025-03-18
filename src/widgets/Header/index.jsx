@@ -3,7 +3,7 @@ import Accordion from '../../shared/utils/Accordion';
 import NavBar from '../NavBar';
 import BurgerMenu from '../../shared/components/BurgerMenu';
 import useOutsideClick from '../../shared/hooks/useOutsideClick';
-import './style.scss';
+import './index.scss';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,7 +1,7 @@
 import React from 'react';
 import NavItem from '../../shared/components/NavItem';
 import { navItems } from './data';
-import './style.scss';
+import './index.scss';
 
 const NavBar = ({ onClose }) => {
   return (

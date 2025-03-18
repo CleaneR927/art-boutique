@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.scss';
+import './index.scss';
 
 const BurgerMenu = ({ isOpen }) => {
   return (
