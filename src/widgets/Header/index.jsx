@@ -22,8 +22,8 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <div className={styles.header__menu}>
-        <div className={styles['header__menu-container']}>
+      <div className={styles.header__container}>
+        <div className={styles.header__menu}>
           <div className={styles.header__icon} onClick={toggleAccordion}>
             <BurgerMenu isOpen={isOpen} />
           </div>

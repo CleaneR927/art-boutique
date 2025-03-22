@@ -2,7 +2,7 @@ import styles from './index.module.scss';
 
 const CarouselBlock = ({ children }) => {
   return (
-    <div>
+    <section>
       <div>
         <h1>
           АРТ <span>.</span> БУТИК БИЖУТЕРИИ
@@ -14,7 +14,7 @@ const CarouselBlock = ({ children }) => {
       </div>
       <div>{children}</div>
       <button>Портфолио работ</button>
-    </div>
+    </section>
   );
 };
 

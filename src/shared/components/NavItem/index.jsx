@@ -3,7 +3,7 @@ import styles from './index.module.scss';
 
 const NavItem = ({ title, onClick }) => {
   return (
-    <div className={styles.navigate__list}>
+    <li className={styles.navigate__list}>
       <svg
         width="10"
         height="10"
@@ -16,10 +16,10 @@ const NavItem = ({ title, onClick }) => {
           fill="inherit"
         />
       </svg>
-      <li className={styles['navigate__list-item']} onClick={onClick}>
+      <div className={styles['navigate__list-item']} onClick={onClick}>
         {title}
-      </li>
-    </div>
+      </div>
+    </li>
   );
 };
 

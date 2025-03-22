@@ -6,12 +6,12 @@
   gap: 15px;
 
   svg {
-    transition: fill 0.2s ease-in;
+    transition: fill var(--duration) var(--easing);
   }
 
   &:hover {
     svg {
-      fill: var(--hover-color, #a6906e);
+      fill: var(--hover-color);
     }
   }
 
@@ -20,10 +20,10 @@
     font-weight: 500;
     max-height: 20px;
     user-select: none;
-    transition: color 0.2s ease-in;
+    transition: color var(--duration) var(--easing);
 
     &:hover {
-      color: var(--hover-color, #a6906e);
+      color: var(--hover-color);
     }
 
     &::after {
@@ -33,10 +33,10 @@
       bottom: -4px;
       width: 100%;
       height: 0.1rem;
-      background: url('../../assets/images/decoration/hor-line-small-hvr.svg')
+      background: url('../../../assets/images/decoration/hor-line-small-hvr.svg')
         no-repeat center / cover;
       transform: translateX(-50%) scaleX(0);
-      transition: transform 0.3s ease-in-out;
+      transition: transform var(--duration) var(--easing);
     }
 
     &:hover::after {

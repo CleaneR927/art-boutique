@@ -5,7 +5,7 @@ import styles from './index.module.scss';
 
 const NavBar = ({ onClose }) => {
   return (
-    <div className={styles.navigate}>
+    <nav className={styles.navigate}>
       <div className={styles.navigate__column}>
         <ul className={styles['navigate__column--list']}>
           {navItems.map((item, index) => (
@@ -22,11 +22,11 @@ const NavBar = ({ onClose }) => {
           </li>
           <li className={styles.navigate__contact}>
             <span className={styles['time--title']}>Рабочее время:</span>
-            <p className={styles.time}>с 12:00 до 20:00</p>
+            <p className={styles.time}>с 12:00 до 20:00 (ЕКБ)</p>
           </li>
         </ul>
       </div>
-    </div>
+    </nav>
   );
 };
 

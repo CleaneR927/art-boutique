@@ -8,12 +8,12 @@
 
   &:hover {
     svg path {
-      fill: var(--hover-color, #a6906e);
+      fill: var(--hover-color);
     }
   }
 
   .line {
-    transition: all 0.3s ease;
+    transition: all var(--duration) var(--easing);
 
     &.change {
       &:nth-child(1) {

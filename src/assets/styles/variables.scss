@@ -9,4 +9,14 @@
   --hover-color: #a6906e;
 
   // text
+
+  // Changeability
+
+  --duration: 0.3s;
+  --easing: ease;
+
+  // cursor
+
+  --default: url('../images/DefaultCursor.svg'), auto;
+  --pointer: url('../images/PointerCursor.svg'), pointer;
 }
