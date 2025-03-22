@@ -1,0 +1,23 @@
+@mixin decorLineTop($url, $width: 100%, $height: 2px, $left: 0, $top: 0) {
+  &::before {
+    content: '';
+    position: absolute;
+    left: $left;
+    top: $top;
+    width: $width;
+    height: $height;
+    background: url($url) no-repeat center / cover;
+  }
+}
+
+@mixin decorLineBottom($url, $width: 100%, $height: 2px, $left: 0, $bottom: 0) {
+  &::before {
+    content: '';
+    position: absolute;
+    left: $left;
+    bottom: $bottom;
+    width: $width;
+    height: $height;
+    background: url($url) no-repeat center / cover;
+  }
+}

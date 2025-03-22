@@ -1,33 +1,29 @@
 import React from 'react';
 import SocialItem from '../../shared/components/SocialItem';
-import dataSocial from './data';
+import { ArraySocial, TextMap } from './data';
+import useResponsive from '../../shared/hooks/useResponsive';
 import styles from './index.module.scss';
 
 const Footer = () => {
+  const ContextTittle = useResponsive(630, TextMap);
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__container}>
-        <div className={styles.footer__context}>
-          <div className={styles['footer__context_title--container']}>
-            <h2 className={styles.footer__context_title}>
-              АРТ <span className={styles['footer__context_title--dot']}></span>{' '}
-              БУТИК БИЖУТЕРИИ
-            </h2>
-          </div>
-          <p className={styles['footer__context--subtext']}>
+        <div className={styles['footer__context']}>
+          <h2 className={styles.footer__context_title}>
+            {ContextTittle.split(' ')[0]}
+            <span className={styles['footer__context_title--dot']}></span>
+            {ContextTittle.split(' ').slice(1).join(' ')}
+          </h2>
+          <p className={styles['footer__context_subtext']}>
             Авторский бренд украшений
           </p>
         </div>
-        {/* <div className="footer__context--small">
-          <div className="footer__context--text--container">
-            <h2 className="footer__context--text">ART</h2>
-            <h2 className="footer__context--text">BOUTIQUE</h2>
-          </div>
-        </div> */}
-        <div className={styles.footer__divider} />
-        <div className={styles['footer__link--container']}>
-          <ul className={styles['footer__link--socials']}>
-            <SocialItem socialData={dataSocial} />
+        <div className={styles.footer__container_divider} />
+        <div className={styles['footer__links']}>
+          <ul className={styles['footer__links--socials']}>
+            <SocialItem socialData={ArraySocial} />
           </ul>
         </div>
       </div>

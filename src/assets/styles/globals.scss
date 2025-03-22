@@ -1,0 +1,46 @@
+@use './mixins/button-styles.scss' as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-inline: auto;
+  min-width: 320px;
+  max-width: 1024px;
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: var(--main-bg-color, #f9efdb);
+  color: var(--main-text-color, #32302c);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.1rem;
+}
+
+a {
+  font-weight: 500;
+  color: inherit;
+  text-decoration: inherit;
+}
+
+ul {
+  padding-block: 10px;
+  padding-inline: 0;
+  list-style: none;
+}
+
+li {
+  cursor: pointer;
+}
+
+button {
+  @include button-styles(
+    var(--main-text-color, #32302c),
+    var(--accent-text-color, #fff),
+    9px 35px 11px
+  );
+}

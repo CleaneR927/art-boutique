@@ -3,7 +3,7 @@ import telegram from '../../assets/images/social/telegram-ico.svg';
 import whatsapp from '../../assets/images/social/whatsapp-ico.svg';
 import email from '../../assets/images/social/email-ico.svg';
 
-const ArraySocial = [
+export const ArraySocial = [
   {
     id: 1,
     icon: vk,
@@ -34,4 +34,7 @@ const ArraySocial = [
   }
 ];
 
-export default ArraySocial;
+export const TextMap = {
+  desktop: 'АРТ БУТИК БИЖУТЕРИИ',
+  mobile: 'ART BOUTIQUE'
+};
