@@ -1,9 +1,9 @@
 import React from 'react';
-import './index.scss';
+import styles from './index.module.scss';
 
 const NavItem = ({ title, onClick }) => {
   return (
-    <div className="navigate__list">
+    <div className={styles.navigate__list}>
       <svg
         width="10"
         height="10"
@@ -16,7 +16,7 @@ const NavItem = ({ title, onClick }) => {
           fill="inherit"
         />
       </svg>
-      <li className="navigate__list-item" onClick={onClick}>
+      <li className={styles['navigate__list-item']} onClick={onClick}>
         {title}
       </li>
     </div>

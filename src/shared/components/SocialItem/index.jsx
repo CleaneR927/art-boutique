@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.scss';
+import styles from './index.module.scss';
 
 const SocialItem = ({ socialData }) => {
   return (
@@ -7,7 +7,7 @@ const SocialItem = ({ socialData }) => {
       {socialData.map((item) => (
         <li key={item.id}>
           <a
-            className={'footer__link--social'}
+            className={styles['footer__link--social']}
             target="_blank"
             rel="noopener noreferrer"
             href={item.link}
