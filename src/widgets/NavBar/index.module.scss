@@ -1,5 +1,3 @@
-@use '../../assets/styles/variables.scss' as *;
-
 .navigate {
   display: flex;
   flex-direction: column;
@@ -56,7 +54,7 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-    cursor: default;
+    cursor: var(--default);
   }
 
   &__divider {

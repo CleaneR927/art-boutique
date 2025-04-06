@@ -1,13 +1,17 @@
 import React from 'react';
 import Header from '../../widgets/Header';
 import Footer from '../../widgets/Footer';
-import CarouselBlock from '../../widgets/CarouselBlock';
+import Intro from '../../widgets/Intro';
+import Slider from '../../widgets/Slider';
+import { sliderImages } from '../../assets/data/data';
 
 function Home() {
   return (
     <>
       <Header />
-      <CarouselBlock />
+      <Intro>
+        <Slider images={sliderImages} />
+      </Intro>
       <Footer />
     </>
   );

@@ -22,7 +22,7 @@ const NavBar = ({ onClose }) => {
           </li>
           <li className={styles.navigate__contact}>
             <span className={styles['time--title']}>Рабочее время:</span>
-            <p className={styles.time}>с 12:00 до 20:00 (ЕКБ)</p>
+            <p className={styles.time}>с 12:00 до 20:00 (Екатеринбург)</p>
           </li>
         </ul>
       </div>

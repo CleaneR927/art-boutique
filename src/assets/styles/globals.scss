@@ -17,12 +17,16 @@ body {
   font-family: 'Playfair Display', Georgia, serif;
   line-height: 1.5;
   font-weight: 400;
-  background-color: var(--main-bg-color, #f9efdb);
-  color: var(--main-text-color, #32302c);
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   letter-spacing: 0.1rem;
+
+  &.noScroll {
+    overflow: hidden;
+  }
 }
 
 a {
@@ -39,14 +43,17 @@ ul {
 
 li,
 svg,
-img {
+a,
+button,
+input,
+textarea {
   cursor: var(--pointer);
 }
 
 button {
   @include button-styles(
-    var(--main-text-color, #32302c),
-    var(--accent-text-color, #fff),
+    var(--main-text-color),
+    var(--accent-text-color),
     9px 35px 11px
   );
 }

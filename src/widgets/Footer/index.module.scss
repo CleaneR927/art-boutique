@@ -1,4 +1,4 @@
-@import '../../assets/styles/mixins/decorLine.scss';
+@use '../../assets/styles/mixins/decorLine.scss' as *;
 
 .footer {
   position: relative;

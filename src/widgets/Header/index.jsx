@@ -4,6 +4,7 @@ import NavBar from '../NavBar';
 import BurgerMenu from '../../shared/components/BurgerMenu';
 import useOutsideClick from '../../shared/hooks/useOutsideClick';
 import styles from './index.module.scss';
+import useScrollLock from '../../shared/hooks/useScrollLock';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,18 +21,21 @@ const Header = () => {
 
   useOutsideClick(accordionRef, closeAccordion);
 
+  useScrollLock(isOpen);
+
   return (
-    <header className={styles.header}>
+    <header className={styles.header} ref={accordionRef}>
       <div className={styles.header__container}>
         <div className={styles.header__menu}>
           <div className={styles.header__icon} onClick={toggleAccordion}>
             <BurgerMenu isOpen={isOpen} />
           </div>
         </div>
-        <Accordion ref={accordionRef} isOpen={isOpen}>
+        <Accordion isOpen={isOpen}>
           <NavBar onClose={toggleAccordion} />
         </Accordion>
       </div>
+      {isOpen && <div className={styles.overlay} onClick={closeAccordion} />}
     </header>
   );
 };
