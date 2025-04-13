@@ -12,8 +12,8 @@
     display: flex;
     justify-content: start;
     transition: transform var(--duration-slow) var(--easing);
-    max-inline-size: clamp(24.375rem, -37.5rem + 220vw, 31.25rem);
-    max-block-size: clamp(12.1875rem, -18.75rem + 110vw, 15.625rem);
+    max-inline-size: clamp(28.75rem, -32.5rem + 155.5556vw, 37.5rem);
+    max-block-size: clamp(14.375rem, -38.125rem + 133.3333vw, 21.875rem);
     margin-block-end: 60px;
 
     @media screen and (min-width: 630px) {
@@ -68,6 +68,11 @@
         grid-row: 1/2;
         align-self: center;
       }
+    }
+
+    @media screen and (min-width: 720px) {
+      inline-size: 50px;
+      block-size: 50px;
     }
   }
 

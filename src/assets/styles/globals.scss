@@ -12,8 +12,7 @@ html {
 
 body {
   margin-inline: auto;
-  min-width: 320px;
-  max-width: 1024px;
+  min-inline-size: 320px;
   font-family: 'Playfair Display', Georgia, serif;
   line-height: 1.5;
   font-weight: 400;
@@ -23,10 +22,21 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   letter-spacing: 0.1rem;
+}
 
-  &.noScroll {
-    overflow: hidden;
-  }
+::-webkit-scrollbar {
+  inline-size: 8px;
+  background-color: var(--main-text-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    var(--accent-bg-color),
+    var(--main-bg-color),
+    var(--accent-bg-color)
+  );
+  border-radius: 5px;
 }
 
 a {

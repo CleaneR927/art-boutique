@@ -1,0 +1,35 @@
+@use '../../assets/styles/mixins/decorLine.scss' as *;
+@use '../../assets/styles/mixins/imageMask.scss' as *;
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  inline-size: 100%;
+  padding-block-end: 15px;
+
+  &__img {
+    inline-size: 100%;
+    block-size: 275px;
+    object-fit: cover;
+    position: relative;
+  }
+
+  &__mask {
+    @include imageMask(var(--accent-bg-color));
+  }
+
+  &__description {
+    color: var(--accent-text-color);
+    font-size: 18px;
+    align-self: start;
+    letter-spacing: 0;
+    inline-size: 100%;
+    padding-inline: 10px;
+  }
+
+  @include decorLineBottom(
+    '../../assets/images/decoration/hor-line-small-white.svg'
+  );
+}

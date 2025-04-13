@@ -1,4 +1,4 @@
-@use '../../../assets/styles/mixins/drawingHorLine.scss' as *;
+@use '../../../assets/styles/mixins/decorLine.scss' as *;
 
 .accordion {
   position: relative;
@@ -24,7 +24,7 @@
     width: 100%;
   }
 
-  @include drawingHorLine(
+  @include decorLineBottom(
     '../../../assets/images/decoration/hor-line-large.svg'
   );
 }

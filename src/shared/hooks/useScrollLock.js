@@ -2,14 +2,21 @@ import { useEffect } from 'react';
 
 const useScrollLock = (isLocked) => {
   useEffect(() => {
+    const preventScroll = (event) => {
+      event.preventDefault();
+    };
+
     if (isLocked) {
-      document.body.classList.add('noScroll');
+      window.addEventListener('wheel', preventScroll, { passive: false });
+      window.addEventListener('touchmove', preventScroll, { passive: false });
     } else {
-      document.body.classList.remove('noScroll');
+      window.removeEventListener('wheel', preventScroll);
+      window.removeEventListener('touchmove', preventScroll);
     }
 
     return () => {
-      document.body.classList.remove('noScroll');
+      window.removeEventListener('wheel', preventScroll);
+      window.removeEventListener('touchmove', preventScroll);
     };
   }, [isLocked]);
 };
