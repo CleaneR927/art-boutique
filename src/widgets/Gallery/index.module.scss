@@ -32,7 +32,7 @@
       content: '';
       position: absolute;
       right: -10px;
-      bottom: -3px;
+      bottom: -5px;
       inline-size: 50px;
       block-size: 50px;
       background: url('../../assets/images/decoration/frame_down-white.svg')
@@ -44,7 +44,7 @@
       50px,
       50px,
       -10px,
-      1px
+      -1px
     );
   }
 
@@ -70,6 +70,17 @@
     color: transparent;
     background: url('../../assets/images/btn-more-desktop-white.svg') no-repeat
       center / contain;
+
+    @media screen and (max-width: 880px) {
+      right: clamp(3.75rem, -5.0708rem + 24.3333vw, 8.3125rem);
+    }
+
+    @media screen and (max-width: 579px) {
+      position: static;
+      inline-size: 130px;
+      block-size: 40px;
+      background-image: url('../../assets/images/btn-more-mobile-white.svg');
+    }
   }
 
   @media screen and (max-width: 630px) {
