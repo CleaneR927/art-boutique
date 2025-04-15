@@ -22,11 +22,13 @@ const Gallery = () => {
         ) : error ? (
           <ErrorComponent error={error} />
         ) : (
-          cards
-            .slice(0, 5)
-            .map((image) => <CardProduct key={image.id} image={image} />)
+          <>
+            {cards.slice(0, 5).map((image) => (
+              <CardProduct key={image.id} image={image} />
+            ))}
+            <button className={styles.gallery__button} />
+          </>
         )}
-        <button className={styles.gallery__button} />
       </div>
     </section>
   );
