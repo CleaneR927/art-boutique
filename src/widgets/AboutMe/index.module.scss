@@ -12,11 +12,14 @@
 
   &__image {
     position: relative;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
 
     &_container {
       position: relative;
-      inline-size: 130px;
-      block-size: 130px;
+      max-inline-size: 130px;
+      max-block-size: 130px;
 
       @include decorLineTop(
         '../../assets/images/decoration/frame_up-black.svg',
@@ -73,6 +76,8 @@
       no-repeat center / contain;
     color: var(--main-text-color);
     text-wrap: nowrap;
+    padding: 5px 10px;
+
     &-container {
       display: flex;
       flex-direction: column;
@@ -127,15 +132,16 @@
 @media screen and (max-width: 580px) {
   .about {
     flex-direction: column;
-    padding-inline: 20px;
+    padding: 20px;
+    padding-block-start: 30px;
+    gap: 20px;
 
     &__image {
-      inline-size: 100%;
-      block-size: 100%;
-
       &_container {
-        inline-size: 170px;
-        block-size: 170px;
+        max-inline-size: none;
+        max-block-size: none;
+        inline-size: 200px;
+        block-size: 200px;
         align-self: center;
       }
     }

@@ -1,4 +1,4 @@
-import avatar from '../../assets/images/avatar.jpg';
+import avatar from '../../assets/images/maria_avatar.jpg';
 
 export const userData = {
   image: avatar,
