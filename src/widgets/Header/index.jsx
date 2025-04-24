@@ -31,7 +31,7 @@ const Header = () => {
             <BurgerMenu isOpen={isOpen} />
           </div>
         </div>
-        <Accordion isOpen={isOpen}>
+        <Accordion isOpen={isOpen} classe={styles.header__bottom_line}>
           <NavBar onClose={toggleAccordion} />
         </Accordion>
       </div>

@@ -5,6 +5,8 @@ import Intro from '../../widgets/Intro';
 import Slider from '../../widgets/Slider';
 import { sliderImages } from '../../assets/data/data';
 import Gallery from '../../widgets/Gallery';
+import AboutMe from '../../widgets/AboutMe';
+import { userData } from '../../widgets/AboutMe/data';
 
 function Home() {
   return (
@@ -14,6 +16,7 @@ function Home() {
         <Slider images={sliderImages} />
       </Intro>
       <Gallery />
+      <AboutMe data={userData} />
       <Footer />
     </>
   );

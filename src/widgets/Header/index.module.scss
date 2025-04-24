@@ -4,28 +4,33 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  z-index: 1000;
-
+  inline-size: 100%;
+  z-index: 100;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &__bottom_line {
+    @include decorLineBottom(
+      '../../assets/images/decoration/hor-line-large.svg'
+    );
+  }
 
   &__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    inline-size: 100%;
   }
 
   &__menu {
     position: relative;
     display: flex;
     justify-content: center;
-    width: 100%;
+    inline-size: 100%;
     background-color: var(--main-bg-color);
-    z-index: 1000;
+    z-index: 90;
 
     @include decorLineBottom(
       '../../assets/images/decoration/hor-line-small.svg'
@@ -45,8 +50,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  inline-size: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  z-index: 998;
+  z-index: 88;
 }

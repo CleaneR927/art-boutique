@@ -1,5 +1,5 @@
 @mixin decorLineTop($url, $width: 100%, $height: 2px, $left: 0, $top: -1px) {
-  &::before {
+  &::after {
     content: '';
     position: absolute;
     left: $left;

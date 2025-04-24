@@ -1,0 +1,143 @@
+@use '../../assets/styles/mixins/imageMask.scss' as *;
+@use '../../assets/styles/mixins/decorLine.scss' as *;
+
+.about {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding-block: 30px;
+  padding-inline: 40px;
+  max-inline-size: 1024px;
+  margin-inline: auto;
+
+  &__image {
+    position: relative;
+
+    &_container {
+      position: relative;
+      inline-size: 130px;
+      block-size: 130px;
+
+      @include decorLineTop(
+        '../../assets/images/decoration/frame_up-black.svg',
+        50px,
+        50px,
+        -10px,
+        -10px
+      );
+      @include decorLineBottom(
+        '../../assets/images/decoration/frame_down-black.svg',
+        50px,
+        50px,
+        calc(100% - 39px),
+        -10px
+      );
+    }
+  }
+
+  &__mask {
+    @include imageMask(var(--accent-bg-color));
+    inline-size: 100%;
+    block-size: 100%;
+  }
+
+  &__description {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  &__title {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding-block-end: 10px;
+
+    @include decorLineBottom(
+      '../../assets/images/decoration/hor-line-small.svg'
+    );
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    max-inline-size: 130px;
+    background-color: transparent;
+    background: url('../../assets/images/decoration/frame_about-me.svg')
+      no-repeat center / contain;
+    color: var(--main-text-color);
+    text-wrap: nowrap;
+    &-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &:active {
+      transform: none;
+    }
+
+    &_text {
+      font-weight: 600;
+    }
+
+    &_icon {
+      inline-size: 18px;
+      block-size: 18px;
+      transform: rotate(180deg);
+      transition: transform var(--duration-slow) var(--easing);
+
+      &--rotate {
+        transform: rotate(0deg);
+      }
+    }
+
+    &_text {
+      text-transform: uppercase;
+    }
+  }
+
+  &__accordion-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__bottom_line {
+    background-color: transparent;
+
+    @include decorLineBottom(
+      '../../assets/images/decoration/frame_down-black.svg',
+      50px,
+      50px,
+      calc(100% - 39px),
+      -10px
+    );
+  }
+
+  &__subtext {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .about {
+    flex-direction: column;
+    padding-inline: 20px;
+
+    &__image {
+      inline-size: 100%;
+      block-size: 100%;
+
+      &_container {
+        inline-size: 170px;
+        block-size: 170px;
+        align-self: center;
+      }
+    }
+  }
+}
