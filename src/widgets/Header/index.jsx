@@ -1,10 +1,12 @@
 import React, { useRef, useState } from 'react';
-import Accordion from '../../shared/utils/Accordion';
-import NavBar from '../NavBar';
+
 import BurgerMenu from '../../shared/components/BurgerMenu';
 import useOutsideClick from '../../shared/hooks/useOutsideClick';
-import styles from './index.module.scss';
 import useScrollLock from '../../shared/hooks/useScrollLock';
+import Accordion from '../../shared/utils/Accordion';
+import NavBar from '../NavBar';
+
+import styles from './index.module.scss';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,6 +1,8 @@
 import React from 'react';
-import styles from './index.module.scss';
+
 import clsx from 'clsx';
+
+import styles from './index.module.scss';
 
 const BurgerMenu = ({ isOpen }) => {
   return (

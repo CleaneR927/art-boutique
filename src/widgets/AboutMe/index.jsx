@@ -1,9 +1,12 @@
 import { useRef, useState } from 'react';
-import Accordion from '../../shared/utils/Accordion';
-import styles from './index.module.scss';
-import useOutsideClick from '../../shared/hooks/useOutsideClick';
-import arrow from '../../assets/images/btn-about-me.svg';
+
 import clsx from 'clsx';
+
+import arrow from '../../assets/images/btn-about-me.svg';
+import useOutsideClick from '../../shared/hooks/useOutsideClick';
+import Accordion from '../../shared/utils/Accordion';
+
+import styles from './index.module.scss';
 
 const AboutMe = ({ data }) => {
   const [isOpen, setIsOpen] = useState(false);

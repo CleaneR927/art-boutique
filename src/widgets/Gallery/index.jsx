@@ -5,7 +5,7 @@ import CardProduct from '../CardProduct';
 
 import styles from './index.module.scss';
 
-const Gallery = () => {
+const Gallery = ({ onClick }) => {
   const { cards, loading, error } = useCardsData();
 
   return (
@@ -26,7 +26,7 @@ const Gallery = () => {
             {cards.slice(0, 5).map((image) => (
               <CardProduct key={image.id} image={image} />
             ))}
-            <button className={styles.gallery__button} />
+            <button className={styles.gallery__button} onClick={onClick} />
           </>
         )}
       </div>

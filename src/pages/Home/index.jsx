@@ -1,23 +1,28 @@
 import React from 'react';
-import Header from '../../widgets/Header';
-import Footer from '../../widgets/Footer';
-import Intro from '../../widgets/Intro';
-import Slider from '../../widgets/Slider';
+
+import { useNavigate } from 'react-router-dom';
+
 import { sliderImages } from '../../assets/data/data';
-import Gallery from '../../widgets/Gallery';
 import AboutMe from '../../widgets/AboutMe';
 import { userData } from '../../widgets/AboutMe/data';
+import Gallery from '../../widgets/Gallery';
+import Intro from '../../widgets/Intro';
+import Slider from '../../widgets/Slider';
 
 function Home() {
+  const navigate = useNavigate();
+
+  const handleGalleryClick = () => {
+    navigate('/gallery');
+  };
+
   return (
     <>
-      <Header />
-      <Intro>
+      <Intro onClick={handleGalleryClick}>
         <Slider images={sliderImages} />
       </Intro>
-      <Gallery />
+      <Gallery onClick={handleGalleryClick} />
       <AboutMe data={userData} />
-      <Footer />
     </>
   );
 }

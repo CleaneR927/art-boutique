@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import styles from './index.module.scss';
+
 import clsx from 'clsx';
+
+import styles from './index.module.scss';
 
 const Slider = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);

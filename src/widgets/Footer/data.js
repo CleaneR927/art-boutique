@@ -1,7 +1,7 @@
-import vk from '../../assets/images/social/vk-ico.svg';
-import telegram from '../../assets/images/social/telegram-ico.svg';
-import whatsapp from '../../assets/images/social/whatsapp-ico.svg';
 import email from '../../assets/images/social/email-ico.svg';
+import telegram from '../../assets/images/social/telegram-ico.svg';
+import vk from '../../assets/images/social/vk-ico.svg';
+import whatsapp from '../../assets/images/social/whatsapp-ico.svg';
 
 export const ArraySocial = [
   {

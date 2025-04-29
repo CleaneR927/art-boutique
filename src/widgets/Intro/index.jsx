@@ -1,8 +1,9 @@
 import useResponsive from '../../shared/hooks/useResponsive';
 import { TextMap } from './data';
+
 import styles from './index.module.scss';
 
-const Intro = ({ children }) => {
+const Intro = ({ onClick, children }) => {
   const ContextTittle = useResponsive(631, TextMap);
 
   return (
@@ -16,7 +17,7 @@ const Intro = ({ children }) => {
         </p>
       </div>
       <div className={styles['section__container--slider']}>{children}</div>
-      <button className={styles.section__button} />
+      <button className={styles.section__button} onClick={onClick} />
     </section>
   );
 };

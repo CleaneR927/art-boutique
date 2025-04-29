@@ -72,4 +72,3 @@ yarn build
 
 - Node.js >= 20.15.0
 - npm >= 10.9.2
-

@@ -1,17 +1,19 @@
 import React from 'react';
+
 import SocialItem from '../../shared/components/SocialItem';
-import { ArraySocial, TextMap } from './data';
 import useResponsive from '../../shared/hooks/useResponsive';
+import { ArraySocial, TextMap } from './data';
+
 import styles from './index.module.scss';
 
-const Footer = () => {
+const Footer = ({ handleHome }) => {
   const ContextTittle = useResponsive(630, TextMap);
 
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__container}>
         <div className={styles['footer__context']}>
-          <h2 className={styles.footer__context_title}>
+          <h2 className={styles.footer__context_title} onClick={handleHome}>
             {ContextTittle.split(' ')[0]}
             <span className={styles['footer__context_title--dot']}></span>
             {ContextTittle.split(' ').slice(1).join(' ')}
