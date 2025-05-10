@@ -1,0 +1,46 @@
+.navigate__list {
+  max-width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+
+  svg {
+    transition: fill var(--duration) var(--easing);
+  }
+
+  &:hover {
+    svg {
+      fill: var(--hover-color);
+    }
+  }
+
+  &-item {
+    position: relative;
+    font-weight: 500;
+    max-height: 20px;
+    user-select: none;
+    transition: color var(--duration) var(--easing);
+
+    &:hover {
+      color: var(--hover-color);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -4px;
+      width: 100%;
+      height: 0.1rem;
+      background: url('../../../assets/images/decoration/hor-line-small-hvr.svg')
+        no-repeat center / cover;
+      transform: translateX(-50%) scaleX(0);
+      transition: transform var(--duration) var(--easing);
+    }
+
+    &:hover::after {
+      transform: translateX(-50%) scaleX(1);
+    }
+  }
+}

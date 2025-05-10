@@ -1,0 +1,69 @@
+@use './mixins/button-styles.scss' as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  cursor: var(--default);
+}
+
+body {
+  margin-inline: auto;
+  min-inline-size: 320px;
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.1rem;
+}
+
+::-webkit-scrollbar {
+  inline-size: 8px;
+  background-color: var(--main-text-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    var(--accent-bg-color),
+    var(--main-bg-color),
+    var(--accent-bg-color)
+  );
+  border-radius: 5px;
+}
+
+a {
+  font-weight: 500;
+  color: inherit;
+  text-decoration: inherit;
+}
+
+ul {
+  padding-block: 10px;
+  padding-inline: 0;
+  list-style: none;
+}
+
+li,
+svg,
+a,
+button,
+input,
+textarea {
+  cursor: var(--pointer);
+}
+
+button {
+  @include button-styles(
+    var(--main-text-color),
+    var(--accent-text-color),
+    9px 35px 11px
+  );
+}

@@ -1,0 +1,31 @@
+@mixin button-styles($background-color: #000, $color: #fff, $padding: 10px) {
+  padding: $padding;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: inherit;
+  color: $color;
+  background-color: $background-color;
+  border: none;
+  border-radius: 25px;
+  user-select: none;
+  transform: scale(1);
+  transition:
+    transform var(--duration) var(--easing),
+    opacity var(--duration) var(--easing);
+
+  &:hover {
+    opacity: 0.85;
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  &__button:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}

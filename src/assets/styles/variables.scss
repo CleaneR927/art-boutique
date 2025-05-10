@@ -1,0 +1,23 @@
+:root {
+  // colors
+
+  --main-text-color: #32302c;
+  --accent-text-color: #fff;
+  --main-bg-color: #f9efdb;
+  --add-bg-color: #f3ede0;
+  --accent-bg-color: #796857;
+  --hover-color: #a6906e;
+
+  // text
+
+  // Changeability
+
+  --duration: 0.4s;
+  --duration-slow: 0.6s;
+  --easing: ease;
+
+  // cursor
+
+  --default: url('../images/DefaultCursor.svg'), auto;
+  --pointer: url('../images/PointerCursor.svg'), pointer;
+}
